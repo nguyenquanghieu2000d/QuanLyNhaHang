@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane layoutX="14.0" layoutY="102.0" prefHeight="45.0" prefWidth="568.0">
+         <children>
+            <Label layoutX="90.0" layoutY="14.0" text="Tài khoản:" />
+            <TextField fx:id="themtaikhoan" layoutX="155.0" layoutY="10.0" prefHeight="25.0" prefWidth="403.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="155.0" prefHeight="45.0" prefWidth="568.0">
+         <children>
+            <Label layoutX="89.0" layoutY="14.0" text="Mật khẩu:" />
+            <TextField fx:id="themmatkhau" layoutX="155.0" layoutY="10.0" prefHeight="25.0" prefWidth="403.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="200.0" prefHeight="45.0" prefWidth="568.0">
+         <children>
+            <Label layoutX="63.0" layoutY="14.0" text="Tên nhân viên:" />
+            <TextField fx:id="themtennhanvien" layoutX="155.0" layoutY="10.0" prefHeight="25.0" prefWidth="403.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="57.0" prefHeight="45.0" prefWidth="568.0">
+         <children>
+            <Label layoutX="70.0" layoutY="14.0" text="Mã nhân viên:" textAlignment="CENTER" />
+            <TextField fx:id="themmanhanvien" layoutX="155.0" layoutY="10.0" prefHeight="25.0" prefWidth="403.0" />
+         </children>
+      </Pane>
+      <Label layoutX="192.0" layoutY="14.0" text="THÊM NHÂN VIÊN">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="268.0" layoutY="332.0" mnemonicParsing="false" onAction="#ThemNhanVien1" text="Xác nhận" />
+      <Label layoutX="212.0" layoutY="300.0" prefHeight="17.0" prefWidth="164.0" fx:id="xacnhan" />
+      <Pane layoutX="17.0" layoutY="245.0" prefHeight="45.0" prefWidth="568.0">
+         <children>
+            <Label layoutX="63.0" layoutY="14.0" text="Chức vụ: " />
+            <ComboBox fx:id="chonchucvu" layoutX="152.0" layoutY="10.0"
+                      prefHeight="25.0" prefWidth="201.0" promptText="Chọn chức vụ"/>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
