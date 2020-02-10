@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.QuanLyNhanVienController">
+   <children>
+      <BorderPane fx:id="mainPane" prefHeight="700.0" prefWidth="1300.0">
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <left>
+                  <VBox prefHeight="700.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#ThemNhanVien" prefHeight="50.0" prefWidth="300.0" text="Thêm nhân viên">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                        <HBox layoutX="10.0" layoutY="130.0" prefHeight="27.0" prefWidth="280.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="149.0" text="Nhập mã nhân viên để sửa: ">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="SuaNhanVien" prefHeight="25.0" prefWidth="70.0" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="ThongBao" prefHeight="17.0" prefWidth="219.0">
+                           <VBox.margin>
+                              <Insets left="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#SuaNhanVien" prefHeight="50.0" prefWidth="300.0" text="Sửa nhân viên">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                        <HBox layoutX="10.0" layoutY="130.0" prefHeight="27.0" prefWidth="280.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="149.0" text="Nhập mã nhân viên để xóa: ">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="XoaNhanVien" prefHeight="25.0" prefWidth="70.0" />
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#XoaNhanVien" prefHeight="50.0" prefWidth="300.0" text="Xóa nhân viên">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label fx:id="XoaNhanVienThongBao" layoutX="10.0" layoutY="157.0" prefHeight="17.0" prefWidth="136.0">
+                           <VBox.margin>
+                              <Insets left="70.0" />
+                           </VBox.margin></Label>
+                     </children>
+                  </VBox>
+               </left>
+               <center>
+                  <TableView fx:id="table" prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="MaNhanVien" prefWidth="95.0" text="Mã nhân viên" />
+                        <TableColumn fx:id="Username" prefWidth="87.0" text="Tài khoản" />
+                        <TableColumn fx:id="password" prefWidth="88.0" text="Mật khẩu" />
+                        <TableColumn fx:id="TenNhanVien" prefWidth="187.0" text="Tên nhân viên" />
+                        <TableColumn fx:id="GioiTinh" prefWidth="66.0" text="Giới tính" />
+                        <TableColumn fx:id="DiaChi" prefWidth="123.0" text="Địa chỉ" />
+                        <TableColumn fx:id="DienThoai" minWidth="0.0" prefWidth="128.0" text="Số điện thoại" />
+                        <TableColumn fx:id="NgaySinh" prefWidth="97.0" text="Ngày sinh" />
+                        <TableColumn fx:id="Tuoi" prefWidth="47.0" text="Tuổi" />
+                        <TableColumn fx:id="MaChucVu" prefWidth="95.0" text="Chức vụ" />
+                    </columns>
+                     <BorderPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </BorderPane.margin>
+                  </TableView>
+               </center>
+               <top>
+                  <Pane prefHeight="52.0" prefWidth="1300.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button layoutX="1186.0" layoutY="14.0" mnemonicParsing="false" onAction="#QuayLai" prefHeight="25.0" prefWidth="100.0" text="Quay lại" />
+                        <Button layoutX="1082.0" layoutY="14.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="25.0" prefWidth="75.0" text="Refresh" />
+                     </children>
+                  </Pane>
+               </top>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

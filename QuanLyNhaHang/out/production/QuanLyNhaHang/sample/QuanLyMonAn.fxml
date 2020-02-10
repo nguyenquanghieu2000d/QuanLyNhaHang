@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.QuanLyMonAnController">
+   <children>
+      <BorderPane fx:id="mainPane" prefHeight="700.0" prefWidth="1300.0">
+         <center>
+            <BorderPane prefHeight="448.0" prefWidth="970.0" BorderPane.alignment="CENTER">
+               <left>
+                  <VBox prefHeight="700.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#ThemMonAn" prefHeight="50.0" prefWidth="300.0" text="Thêm món ăn">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                        <HBox layoutX="10.0" layoutY="130.0" prefHeight="27.0" prefWidth="280.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="149.0" text="Nhập mã để sửa: ">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="SuaMonAn" prefHeight="25.0" prefWidth="70.0" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="ThongBao" prefHeight="17.0" prefWidth="219.0">
+                           <VBox.margin>
+                              <Insets left="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#suaMonAn" prefHeight="50.0" prefWidth="300.0" text="Sửa món ăn">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                        <HBox layoutX="10.0" layoutY="130.0" prefHeight="27.0" prefWidth="280.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="149.0" text="Nhập mã để xóa: ">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="XoaMonAn" prefHeight="25.0" prefWidth="70.0" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="XoaMonAnThongBao" layoutX="10.0" layoutY="157.0" prefHeight="17.0" prefWidth="136.0">
+                           <VBox.margin>
+                              <Insets left="70.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#xoaMonAn" prefHeight="50.0" prefWidth="300.0" text="Xóa món ăn">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                        <HBox layoutX="10.0" layoutY="174.0" prefHeight="27.0" prefWidth="280.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="183.0" text="Nhập mã để xem chi tiết đơn giá">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField prefHeight="25.0" prefWidth="70.0" />
+                           </children>
+                        </HBox>
+                        <Button layoutX="15.0" layoutY="206.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="Xem chỉnh sửa đơn giá" />
+                     </children>
+                  </VBox>
+               </left>
+               <top>
+                  <Pane prefHeight="52.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button layoutX="1186.0" layoutY="14.0" mnemonicParsing="false" onAction="#QuayLai" prefHeight="25.0" prefWidth="100.0" text="Quay lại" />
+                        <Button layoutX="1090.0" layoutY="14.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="25.0" prefWidth="75.0" text="Refresh" />
+                     </children>
+                  </Pane>
+               </top>
+               <center>
+                  <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox prefHeight="648.0" prefWidth="573.0">
+                           <children>
+                              <Label text="DANH SÁCH MÓN ĂN">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="table" prefHeight="651.0" prefWidth="562.0">
+                                 <columns>
+                                    <TableColumn fx:id="MaMonAn" prefWidth="95.0" text="Mã món ăn" />
+                                    <TableColumn fx:id="TenMonAn" prefWidth="88.0" text="Tên món ăn" />
+                                    <TableColumn fx:id="DonViTinh" prefWidth="79.0" text="Đơn vị tính " />
+                                    <TableColumn fx:id="TinhTrang" prefWidth="84.0" text="Tình trạng" />
+                                    <TableColumn fx:id="DonGia" prefWidth="79.0" text="Đơn giá" />
+                                 </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="648.0" prefWidth="705.0">
+                           <children>
+                              <Label text="DANH SÁCH NGUYÊN LIỆU CỦA MÓN ĂN">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="table2" prefHeight="664.0" prefWidth="443.0">
+                                <columns>
+                                  <TableColumn fx:id="MaNguyenLieu" prefWidth="103.0" text="Mã nguyên liệu" />
+                                  <TableColumn fx:id="TenNguyenLieu" prefWidth="110.0" text="Tên nguyên liệu" />
+                                    <TableColumn fx:id="SoLuongCan" prefWidth="68.0" text="Số lượng" />
+                                    <TableColumn fx:id="DonViTinh_" prefWidth="86.0" text="Đơn vị tính" />
+                                    <TableColumn fx:id="TinhTrang_" prefWidth="82.0" text="Tình trạng" />
+                                </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
